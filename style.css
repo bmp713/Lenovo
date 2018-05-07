@@ -1,0 +1,206 @@
+/* Override CSS default settings */
+*{ margin: 0; border: 0; padding: 0; box-sizing: border-box; }
+a{ cursor: pointer; text-decoration: none; }
+
+@keyframes fadein{
+	from{ 	opacity: 0; }
+   	to  { 	opacity: 1; }
+}
+#body{
+    background: none;
+    transition: background 5s;
+}
+#wrapper{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    left: 0;
+    animation: fadein 2s;
+    font: 12px sans-serif, times;
+    transition: width 1s;
+}
+#header{
+    position: fixed;
+    margin: 0px auto;
+    padding: 25px 50px;
+    z-index: 99;
+    width: 100%;
+    height: 100px;
+
+    color: black;
+    background: white;
+    font: 22px helvetica;
+}
+    #header_left{
+        width: 30%;
+    }
+        #header_left img{
+            width: 10%;
+        }
+    #header_right{
+        float: right;
+        width: 70%;
+    }
+        #header_right img{
+            float: right;
+            padding: 20px 0 0 0;
+            width: 2%;
+        }
+        #menu_div{
+            padding: 20px 0 0 50px;
+            margin: 0 0 0 0px;
+            float: left;
+        }
+        #menu_div a{
+            float: left;
+            color: black;
+            padding: 0px 50px;
+            font: 16px helvetica;
+            transition: color 1s;
+        }
+        #menu_div a:hover{
+            color: lightgray;
+            transition: color 1s;
+        }
+
+#contents{
+    position: relative;
+    margin: auto;
+    top: 100px;
+    z-index: 0;
+    width: 100%;
+    transition: width 1s;
+}
+    #content_left{
+        position: relative;
+        margin: 0px 0px;
+        float: left;
+        width: 50%;
+        background: url("assets/images/servers_5.jpg") no-repeat fixed;
+        background-size: cover;
+        transition: width 1s;
+        animation: fadein 2s;
+    }
+        #content_1{
+            position: relative;
+            margin: 0px auto 500px auto;
+            padding: 250px 50px;
+            width: 100%;
+            color: white;
+            background: rgba(10, 10, 20, 0.7);
+            animation: fadein 2s;
+        }
+            #content_1_paragraph{
+                color: lightgray;
+                font: 16px sans-serif;
+            }
+
+        #content_2{
+            position: relative;
+            margin: 0px auto 500px auto;
+            padding: 250px 50px;
+            width: 100%;
+            color: white;
+            background: rgba(10, 20, 10, 0.7);
+            animation: fadein 2s;
+        }
+        #content_3{
+            position: relative;
+            margin: 0px auto 1000px auto;
+            padding: 250px 50px;
+            width: 100%;
+            color: white;
+            background: rgba(20, 10, 10, 0.7);
+            animation: fadein 2s;
+        }
+
+    #content_right{
+        position: relative;
+        float: right;
+        margin: 0px 0px;
+        width: 50%;
+        text-align: center;
+        transition: width 1s;
+        animation: fadein 2s;
+    }
+        #content_4{
+            position: relative;
+            margin: auto;
+            padding: 75px 50px 1000px 50px;
+            width: 100%;
+            color: black;
+            background: url("assets/images/thinkpad.jpg") no-repeat fixed;
+            background-size: 100%;
+            animation: fadein 2s;
+        }
+        #content_5{
+            position: relative;
+            margin: auto;
+            padding: 50px 50px 1000px 50px;
+            width: 100%;
+
+            color: white;
+            background: url("assets/images/thinkpad (2).jpg") no-repeat fixed;
+            background-size: 100%;
+            animation: fadein 2s;
+        }
+        #content_6{
+            position: relative;
+            margin: auto;
+            padding: 50px 50px 1000px 50px;
+            width: 100%;
+
+            color: white;
+            background: url("assets/images/Thinkpad_3.jpg") no-repeat fixed;
+            background-size: 100%;
+            animation: fadein 2s;
+        }
+        #content_7{
+            position: relative;
+            margin: auto;
+            padding: 50px 50px 1000px 50px;
+            width: 100%;
+
+            color: white;
+            background: url("assets/images/Thinkpad_yoga.png") no-repeat fixed;
+            background-size: 100%;
+            animation: fadein 2s;
+        }        
+        #content_8{
+            position: relative;
+            margin: auto;
+            padding: 50px 50px 1000px 50px;
+            width: 100%;
+
+            color: white;
+            background: url("assets/images/Thinkpad-77.jpg") no-repeat fixed;
+            background-size: 100%;
+            animation: fadein 2s;
+        }
+        #content_9{
+            position: relative;
+            margin: 0px auto 0px auto;
+            padding: 50px 50px 1000px 50px;
+            width: 100%;
+
+            color: white;
+            background: url("assets/images/Thinkpad_X22.jpg") no-repeat fixed;
+            background-size: 100%;
+            animation: fadein 2s;
+        }
+
+#footer{
+    position: relative;
+    margin: auto;
+    clear: both;
+    padding: 50px;
+    width: inherit;
+    height: 250px;
+
+    color: white;
+    background: rgba(10, 10, 1, 0.9);
+    animation: fadein 2s;
+}
+
+
+
