@@ -9,28 +9,42 @@ function parallax(){
 }
 var menuOpen = 0;
 function openMenu(){
-    if( menuOpen == 0 ){
-        document.querySelector('#content_1_paragraph').style.display = 'none';
-        document.querySelector('#contents').style.width = '75%'; 
-        document.querySelector('#content_left').style.width = '0%';
-        document.querySelector('#content_right').style.width = '100%';
-        menuOpen = 1;
+    console.log("openMenu()");
+    if( window.matchMedia("(min-width: 768px)").matches){
+        console.log("DESKTOP");
+        if( menuOpen == 0 ){
+            document.querySelector("#content_4_sub_heading").style.paddingTop = '35%'; 
+            document.querySelector('#content_1').style.display = 'none';
+            document.querySelector('#content_2').style.display = 'none';
+            document.querySelector('#content_3').style.display = 'none';
+            document.querySelector('#contents').style.width = '75%'; 
+            document.querySelector('#content_left').style.width = '0%';
+            document.querySelector('#content_right').style.width = '100%';
+            menuOpen = 1;
+        }
+        else if( menuOpen == 1 ){
+            document.querySelector("#content_4_sub_heading").style.paddingTop = '50%'; 
+            document.querySelector('#contents').style.width = '100%'; 
+            document.querySelector('#content_left').style.width = '50%';
+            document.querySelector('#content_right').style.width = '50%';
+            document.querySelector('#content_1').style.display = 'block';
+            document.querySelector('#content_2').style.display = 'block';
+            document.querySelector('#content_3').style.display = 'block';
+            menuOpen = 0;
+        }
     }
-    else if( menuOpen == 1 ){
-        document.querySelector('#contents').style.width = '100%'; 
-        document.querySelector('#content_left').style.width = '50%';
-        document.querySelector('#content_right').style.width = '50%';
-        document.querySelector('#content_1_paragraph').style.display = 'block';
-        menuOpen = 0;
+    // MOBILE view
+    else{
+        console.log("MOBILE");
+        if( menuOpen == 0 ){
+            document.querySelector('#menu_div').style.display = 'block';
+            menuOpen = 1;
+        }
+        else if( menuOpen == 1 ){
+            document.querySelector('#menu_div').style.display = 'none'; 
+            menuOpen = 0;
+        }
     }
-    /*
-    if( menuOpen == 2 ){
-        console.log('menuOpen: ' + menuOpen );
-        document.querySelector('#contents').style.width = '100%'; 
-        document.querySelector('#content_left').style.width = '50%';
-        document.querySelector('#content_right').style.width = '50%';
-        menuOpen = 0;
-    }*/
 }
 // Elastic smooth scrolling between content sections
 function smoothScroll( elementId ){
